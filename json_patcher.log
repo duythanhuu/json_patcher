@@ -1,0 +1,19 @@
+2024-05-18 03:39:55 INFO C:\\workspace\\fmusdk\\fmusdk\dummy\dummy.c: replacements '#include <stdio.h>' was replacements by '//replace here 
+#include <stdio.h>' - 1 times
+2024-05-18 03:39:55 INFO C:\\workspace\\fmusdk\\fmusdk\dummy\dummy.c: replacements 'int main() {' was replacements by '//replace 2 here 
+int main() {' - 1 times
+2024-05-18 03:39:55 ERROR C:\\workspace\\fmusdk\\fmusdk\dummy\dummy.c: replacements 'have to be failed' was replacements by '//replace 2 here 
+int main() {' - 0 times
+2024-05-18 03:39:55 INFO C:\\workspace\\fmusdk\\fmusdk\dummy\dummy.c: inserts_afterstring 'FILE *file;' was inserts_afterstring by '// inserts_afterstring here' - 1 times
+2024-05-18 03:39:55 INFO C:\\workspace\\fmusdk\\fmusdk\dummy\dummy.c: inserts_afterstring 'char ch;' was inserts_afterstring by '// inserts_afterstring here' - 1 times
+2024-05-18 03:39:55 INFO C:\\workspace\\fmusdk\\fmusdk\dummy\dummy.c: insert_beforestring 'putchar(ch);' was insert_beforestring by '// insert_beforestring here 
+putchar(ch);' - 1 times
+2024-05-18 03:39:55 INFO C:\\workspace\\fmusdk\\fmusdk\dummy\dummy.c: insert_beforestring 'ch = fgetc(file);' was insert_beforestring by '// insert_beforestring here 
+ch = fgetc(file);' - 2 times
+2024-05-18 03:39:55 INFO C:\\workspace\\fmusdk\\fmusdk\dummy\dummy.c: regex_replacements '0x.*?;' was regex_replacements by '0xFF // regex_pattern1' - 2 times
+2024-05-18 03:39:55 INFO C:\\workspace\\fmusdk\\fmusdk\dummy\include\dummy.h: replacements '#ifndef DUMMY_H' was replacements by '#ifndef DUMMY_H // replacement 1' - 1 times
+2024-05-18 03:39:55 INFO C:\\workspace\\fmusdk\\fmusdk\dummy\include\dummy.h: replacements '#define DUMMY_H' was replacements by '#define DUMMY_H // replacement 2' - 1 times
+2024-05-18 03:39:55 ERROR C:\\workspace\\fmusdk\\fmusdk\dummy\include\dummy.h: replacements 'one more failed' was replacements by '#define DUMMY_H // replacement 2' - 0 times
+2024-05-18 03:39:55 INFO C:\\workspace\\fmusdk\\fmusdk\dummy\include\dummy.h: inserts_afterstring '// Function declarations' was inserts_afterstring by ' insert_afterstring1' - 1 times
+2024-05-18 03:39:55 INFO C:\\workspace\\fmusdk\\fmusdk\dummy\include\dummy.h: insert_beforestring 'void printHello();' was insert_beforestring by '// insert_beforestring1 
+void printHello();' - 1 times

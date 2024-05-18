@@ -1,0 +1,48 @@
+{
+    "json_patcher": [
+        {
+            "path": "dummy",
+            "filename": "dummy.c",
+            "output_path": "output",
+            "output_filename": "new_dummy.c",
+            "features": {
+                "replacements": {
+                    "#include <stdio.h>": "//replace here \n#include <stdio.h>",
+                    "int main() {": "//replace 2 here \nint main() {",
+                    "have to be failed": "//replace 2 here \nint main() {"
+                },
+                "inserts_afterstring": {
+                    "FILE *file;": "// inserts_afterstring here",
+                    "char ch;": "// inserts_afterstring here"
+                },
+                "insert_beforestring": {
+                    "putchar(ch);": "// insert_beforestring here \nputchar(ch);",
+                    "ch = fgetc(file);": "// insert_beforestring here \nch = fgetc(file);"
+                },
+                "regex_replacements": {
+                    "0x.*?;": "0xFF // regex_pattern1"
+                }
+            }
+        },
+        {
+            "path": "dummy\\include",
+            "filename": "dummy.h",
+            "output_filename": "new_dummy_without_output_path.h",
+            "features": {
+                "replacements": {
+                    "#ifndef DUMMY_H": "#ifndef DUMMY_H // replacement 1",
+                    "#define DUMMY_H": "#define DUMMY_H // replacement 2",
+                    "one more failed": "#define DUMMY_H // replacement 2"
+                },
+                "inserts_afterstring": {
+                    "// Function declarations": " insert_afterstring1"
+                },
+                "insert_beforestring": {
+                    "void printHello();": "// insert_beforestring1 \nvoid printHello();"
+                },
+                "regex_replacements": {
+                }
+            }
+        }
+    ]
+}
