@@ -9,6 +9,14 @@ JSON Patcher is a Python script that performs various string manipulations on fi
 - Inserts before string: Insert a string before all occurrences of another string.
 - Regex replacements: Replace all matches of a regular expression with a string.
 
+## Install library
+
+To install the required libraries for this project, navigate to the project directory in your terminal and run the following command:
+
+```bash
+pip install -r requirements.txt
+```
+
 ## Usage
 
 1. Prepare a JSON file with the following structure:
@@ -82,3 +90,4 @@ If you have any questions, feel free to [open an issue](https://github.com/duyth
 ## Acknowledgements
 
 Thanks to all our [contributors](https://github.com/duythanhuu/json_patcher/graphs/contributors)!
+ 
