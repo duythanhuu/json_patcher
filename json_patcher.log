@@ -1,19 +1,15 @@
-2024-05-18 03:39:55 INFO C:\\workspace\\fmusdk\\fmusdk\dummy\dummy.c: replacements '#include <stdio.h>' was replacements by '//replace here 
-#include <stdio.h>' - 1 times
-2024-05-18 03:39:55 INFO C:\\workspace\\fmusdk\\fmusdk\dummy\dummy.c: replacements 'int main() {' was replacements by '//replace 2 here 
-int main() {' - 1 times
-2024-05-18 03:39:55 ERROR C:\\workspace\\fmusdk\\fmusdk\dummy\dummy.c: replacements 'have to be failed' was replacements by '//replace 2 here 
-int main() {' - 0 times
-2024-05-18 03:39:55 INFO C:\\workspace\\fmusdk\\fmusdk\dummy\dummy.c: inserts_afterstring 'FILE *file;' was inserts_afterstring by '// inserts_afterstring here' - 1 times
-2024-05-18 03:39:55 INFO C:\\workspace\\fmusdk\\fmusdk\dummy\dummy.c: inserts_afterstring 'char ch;' was inserts_afterstring by '// inserts_afterstring here' - 1 times
-2024-05-18 03:39:55 INFO C:\\workspace\\fmusdk\\fmusdk\dummy\dummy.c: insert_beforestring 'putchar(ch);' was insert_beforestring by '// insert_beforestring here 
-putchar(ch);' - 1 times
-2024-05-18 03:39:55 INFO C:\\workspace\\fmusdk\\fmusdk\dummy\dummy.c: insert_beforestring 'ch = fgetc(file);' was insert_beforestring by '// insert_beforestring here 
-ch = fgetc(file);' - 2 times
-2024-05-18 03:39:55 INFO C:\\workspace\\fmusdk\\fmusdk\dummy\dummy.c: regex_replacements '0x.*?;' was regex_replacements by '0xFF // regex_pattern1' - 2 times
-2024-05-18 03:39:55 INFO C:\\workspace\\fmusdk\\fmusdk\dummy\include\dummy.h: replacements '#ifndef DUMMY_H' was replacements by '#ifndef DUMMY_H // replacement 1' - 1 times
-2024-05-18 03:39:55 INFO C:\\workspace\\fmusdk\\fmusdk\dummy\include\dummy.h: replacements '#define DUMMY_H' was replacements by '#define DUMMY_H // replacement 2' - 1 times
-2024-05-18 03:39:55 ERROR C:\\workspace\\fmusdk\\fmusdk\dummy\include\dummy.h: replacements 'one more failed' was replacements by '#define DUMMY_H // replacement 2' - 0 times
-2024-05-18 03:39:55 INFO C:\\workspace\\fmusdk\\fmusdk\dummy\include\dummy.h: inserts_afterstring '// Function declarations' was inserts_afterstring by ' insert_afterstring1' - 1 times
-2024-05-18 03:39:55 INFO C:\\workspace\\fmusdk\\fmusdk\dummy\include\dummy.h: insert_beforestring 'void printHello();' was insert_beforestring by '// insert_beforestring1 
-void printHello();' - 1 times
+ERROR /Users/cale/Downloads/json_patcher-main/sample_workspace/dummy/include/dummy_not_here.h: File not found
+INFO /Users/cale/Downloads/json_patcher-main/sample_workspace/dummy/dummy.c: replacements 1 occurrences. '#include <stdio.h>' -> '//replace here \n#include <stdio.h>'
+INFO /Users/cale/Downloads/json_patcher-main/sample_workspace/dummy/dummy.c: replacements 1 occurrences. 'int main() {' -> '//replace 2 here \nint main() {'
+WARNING /Users/cale/Downloads/json_patcher-main/sample_workspace/dummy/dummy.c: replacements 0 occurrences. 'have to be failed' -> '//replace 2 here \nint main() {'
+INFO /Users/cale/Downloads/json_patcher-main/sample_workspace/dummy/dummy.c: inserts_afterstring 1 occurrences. 'FILE *file;' -> '// inserts_afterstring here'
+INFO /Users/cale/Downloads/json_patcher-main/sample_workspace/dummy/dummy.c: inserts_afterstring 1 occurrences. 'char ch;' -> '// inserts_afterstring here'
+INFO /Users/cale/Downloads/json_patcher-main/sample_workspace/dummy/dummy.c: insert_beforestring 1 occurrences. 'putchar(ch);' -> '// insert_beforestring here \nputchar(ch);'
+INFO /Users/cale/Downloads/json_patcher-main/sample_workspace/dummy/dummy.c: insert_beforestring 2 occurrences. 'ch = fgetc(file);' -> '// insert_beforestring here \nch = fgetc(file);'
+INFO /Users/cale/Downloads/json_patcher-main/sample_workspace/dummy/dummy.c: regex_replacements 2 occurrences. '0x.*?;' -> '0xFF // regex_pattern1'
+INFO /Users/cale/Downloads/json_patcher-main/sample_workspace/dummy/include/dummy.h: replacements 1 occurrences. '#ifndef DUMMY_H' -> '#ifndef DUMMY_H // replacement 1'
+INFO /Users/cale/Downloads/json_patcher-main/sample_workspace/dummy/include/dummy.h: replacements 1 occurrences. '#define DUMMY_H' -> '#define DUMMY_H // replacement 2'
+WARNING /Users/cale/Downloads/json_patcher-main/sample_workspace/dummy/include/dummy.h: replacements 0 occurrences. 'one more failed' -> '#define DUMMY_H // replacement 2'
+INFO /Users/cale/Downloads/json_patcher-main/sample_workspace/dummy/include/dummy.h: inserts_afterstring 1 occurrences. '// Function declarations' -> ' insert_afterstring1'
+INFO /Users/cale/Downloads/json_patcher-main/sample_workspace/dummy/include/dummy.h: insert_beforestring 1 occurrences. 'void printHello();' -> '// insert_beforestring1 \nvoid printHello();'
+ERROR /Users/cale/Downloads/json_patcher-main/sample_workspace/dummy/include/dummy_not_here_too.h: File not found

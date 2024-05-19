@@ -1,6 +1,26 @@
 {
     "json_patcher": [
         {
+            "path": "dummy/include",
+            "filename": "dummy_not_here.h",
+            "output_filename": "new_dummy_without_output_path.h",
+            "features": {
+                "replacements": {
+                    "#ifndef DUMMY_H": "#ifndef DUMMY_H // replacement 1",
+                    "#define DUMMY_H": "#define DUMMY_H // replacement 2",
+                    "one more failed": "#define DUMMY_H // replacement 2"
+                },
+                "inserts_afterstring": {
+                    "// Function declarations": " insert_afterstring1"
+                },
+                "insert_beforestring": {
+                    "void printHello();": "// insert_beforestring1 \nvoid printHello();"
+                },
+                "regex_replacements": {
+                }
+            }
+        },
+        {
             "path": "dummy",
             "filename": "dummy.c",
             "output_path": "output",
@@ -25,8 +45,28 @@
             }
         },
         {
-            "path": "dummy\\include",
+            "path": "dummy/include",
             "filename": "dummy.h",
+            "output_filename": "new_dummy_without_output_path.h",
+            "features": {
+                "replacements": {
+                    "#ifndef DUMMY_H": "#ifndef DUMMY_H // replacement 1",
+                    "#define DUMMY_H": "#define DUMMY_H // replacement 2",
+                    "one more failed": "#define DUMMY_H // replacement 2"
+                },
+                "inserts_afterstring": {
+                    "// Function declarations": " insert_afterstring1"
+                },
+                "insert_beforestring": {
+                    "void printHello();": "// insert_beforestring1 \nvoid printHello();"
+                },
+                "regex_replacements": {
+                }
+            }
+        },
+        {
+            "path": "dummy/include",
+            "filename": "dummy_not_here_too.h",
             "output_filename": "new_dummy_without_output_path.h",
             "features": {
                 "replacements": {
