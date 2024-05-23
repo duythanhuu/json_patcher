@@ -90,4 +90,3 @@ If you have any questions, feel free to [open an issue](https://github.com/duyth
 ## Acknowledgements
 
 Thanks to all our [contributors](https://github.com/duythanhuu/json_patcher/graphs/contributors)!
- 
