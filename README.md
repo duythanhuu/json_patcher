@@ -24,32 +24,59 @@ pip install -r requirements.txt
 ```json
 {
     "json_patcher": [
-        {
-            "path": "relative/path/to/file",
-            "filename": "file.txt",
+                {
+            "path": "dummy\\libs",
+            "filename": ["dummy_lib.c", "*.cpp"],
             "features": {
                 "replacements": {
-                    "old_string": "new_string"
+                    "#include <stdio.h>": "//replace here \n#include <stdio.h>",
+                    "int main() {": "//replace 2 here \nint main() {",
+                    "have to be failed": "//replace 2 here \nint main() {"
                 },
                 "inserts_afterstring": {
-                    "existing_string": "insert_string"
+                    "FILE *file;": "// inserts_afterstring here",
+                    "char ch;": "// inserts_afterstring here"
                 },
-                "inserts_beforestring": {
-                    "existing_string": "insert_string"
+                "insert_beforestring": {
+                    "putchar(ch);": "// insert_beforestring here \nputchar(ch);",
+                    "ch = fgetc(file);": "// insert_beforestring here \nch = fgetc(file);"
                 },
                 "regex_replacements": {
-                    "regex_pattern": "replacement_string"
+                    "0x.*?;": "0xFF // regex_pattern1"
                 }
-            },
-            "output_path": "relative/path/to/output",
-            "output_filename": "output_file.txt"
+            }
+        },
+        {
+            "path": "dummy/include",
+            "filename": ["dummy_not_here.h"],
+            "output_path": "output",
+            "output_filename": "new_dummy_without_output_path.h",
+            "features": {
+                "replacements": {
+                    "#ifndef DUMMY_H": "#ifndef DUMMY_H // replacement 1",
+                    "#define DUMMY_H": "#define DUMMY_H // replacement 2",
+                    "one more failed": "#define DUMMY_H // replacement 2"
+                },
+                "inserts_afterstring": {
+                    "// Function declarations": " insert_afterstring1"
+                },
+                "insert_beforestring": {
+                    "void printHello();": "// insert_beforestring1 \nvoid printHello();"
+                },
+                "regex_replacements": {
+                }
+            }
         }
     ]
 }
 ```
 - `path`: This is the relative path to the file to be processed, relative to the workspace.
 
-- `filename`: This is the name of the file to be processed.
+- `filename`: This is the name of the file to be processed or the list of files or glob pattern.
+
+- `output_path`: This is the relative path to the output folder. If it's blank or does not exist the new output file will store in same directory with input.
+
+- `output_filename`: This is the name of the output file if you config for only one `filename` above.
 
 - `features`: This is an object that specifies the string manipulations to be performed. It can contain the following properties:
     - `replacements`: An object where each key-value pair represents a string to be replaced and its replacement.
